@@ -25,7 +25,8 @@ export default class Main extends Component {
     if (this.state.noteText) {
       let d = new Date();
       const newNote = {
-        date: d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate(),
+        //date: d.getFullYear() + "/" + (d.getMonth() + 1) + "/" + d.getDate(),
+        date: d.getDate()+"/"+"0"+(d.getMonth()+1) + "/" + d.getFullYear() + "- " + d.getHours() + ":" + d.getMinutes()+":"+d.getSeconds(),
         note: this.state.noteText
       };
       this.setState({

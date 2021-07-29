@@ -19,7 +19,7 @@ export default class Note extends Component {
           onPress={this.props.deleteHandler}
           style={styles.noteDelete}
         >
-          <Text style={styles.noteDeleteText} />
+          <Text style={styles.noteDeleteText}>-</Text>
         </TouchableOpacity>
       </View>
     );
@@ -37,13 +37,13 @@ const styles = StyleSheet.create({
   noteText: {
     paddingLeft: 20,
     borderLeftWidth: 10,
-    borderLeftColor: "#E91E63"
+    borderLeftColor: "#1E90FF"
   },
   noteDelete: {
     position: "absolute",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#1E90FF",
+    backgroundColor: "#E91E63",
     padding: 10,
     top: 10,
     bottom: 10,
