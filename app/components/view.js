@@ -9,14 +9,11 @@ import {
   TouchableOpacity
 } from "react-native";
 import Note from "./note";
-import * as font from "expo-font";
+import { 
+  BungeeShade_400Regular 
+} from '@expo-google-fonts/bungee-shade';
 import {AppLoading} from "expo";
 
-const fetchFont = () => {
- return font.loadAsync({
-    'grasping': require('../assets/fonts/grasping.ttf') 
-  })
-}
 //Article component
 export default class Main extends Component {
   state = {
@@ -45,15 +42,6 @@ export default class Main extends Component {
       );
     });
 
-const [fontLoaded, setfontlLoaded] = useState(false);
-if(!fontsloaded){
-  return <AppLoading
-  startasync= {fetchFont}
-  onError ={() => console.log('erro ao loadar a font')}
-  onFinish ={() => setfontlLoaded(true)
-  }
-    />;
-}
     return (
       <View style={styles.container}>
         <View style={styles.header}>

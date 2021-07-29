@@ -1132,6 +1132,11 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@expo-google-fonts/bungee-shade@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/bungee-shade/-/bungee-shade-0.2.0.tgz#936aa261cfacb3889b8a7f74f3a562f63f327889"
+  integrity sha512-cMMaGygw+gUQyquHl2GLooCgECSmfVHvoCswOnN1euOhH4VpPN4f8geh19QVXjtkMxNi2u64UnOzvmtuN6VacQ==
+
 "@expo/config-plugins@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@expo/config-plugins/-/config-plugins-2.0.4.tgz#955fd70a2aeefbe99ec71cecb1d7ea7b626dc79e"
