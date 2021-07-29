@@ -48,9 +48,7 @@ export default class Main extends Component {
         <View style={styles.header}>
           <Text style={styles.headerText}> TodoListApp </Text>
         </View>
-
         <ScrollView style={styles.scrollConatiner}>{notes}</ScrollView>
-
         <View style={styles.footer}>
           <TextInput
             style={styles.textInput}
@@ -61,7 +59,6 @@ export default class Main extends Component {
             underlineColorAndroid="#0000"
           />
         </View>
-
         <TouchableOpacity style={styles.addButton} onPress={this.addNote}>
           <Text style={styles.addButtonText}>+</Text>
         </TouchableOpacity>
@@ -86,7 +83,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 18,
     padding:26,
-    fontFamily:"grasping" 
+    //fontFamily:"BungeeShade_400Regular" 
   },
   scrollContainer: {
     flex: 1,
