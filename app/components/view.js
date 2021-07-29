@@ -49,6 +49,11 @@ export default class Main extends Component {
     }
   };
 
+  deleteNote(key) {  
+    this.state.noteArray.splice(key,1);
+    this.setState({noteArray: this.noteArray})
+}
+
   render() {
     let notes = this.state.noteArray.map((val, id) => {
       return (
