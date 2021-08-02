@@ -14,6 +14,8 @@ import {
 } from '@expo-google-fonts/bungee-shade';
 import {AppLoading} from "expo";
 import * as Font from 'expo-font';
+import AnimatedSplash from "react-native-animated-splash-screen";
+
 
 //Article component
 export default class Main extends Component {
@@ -84,10 +86,21 @@ export default class Main extends Component {
     );
     }
     else {
-      return null;
+      return (
+        <AnimatedSplash
+          translucent={true}
+          isLoaded={this.state.isLoaded}
+          logoImage={require("../assets/img/icon.png")}
+          backgroundColor={"#262626"}
+          logoHeight={150}
+          logoWidth={150}
+        >
+        </AnimatedSplash>
+      );
+    }
     }
   }
-}
+
 //Stylesheet
 const styles = StyleSheet.create({
   container: {
