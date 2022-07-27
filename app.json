@@ -2,13 +2,13 @@
   "expo": {
     "name": "TodoListApp",
     "slug": "TodoListApp",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/img/icon.png",
     "splash": {
-    "image": "./app/assets/img/splash.png",
-    "resizeMode": "contain",
-    "backgroundColor": "#ffffff"
+      "image": "./app/assets/img/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,13 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.guilhermedev.TodoListApp"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/img/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.guilhermedev.TodoListApp"
     },
     "web": {
       "favicon": "./app/assets/img/favicon.png"

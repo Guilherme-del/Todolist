@@ -14,6 +14,8 @@ import {
 } from '@expo-google-fonts/bungee-shade';
 import {AppLoading} from "expo";
 import * as Font from 'expo-font';
+import AnimatedSplash from "react-native-animated-splash-screen";
+
 
 //Article component
 export default class Main extends Component {
@@ -50,14 +52,20 @@ export default class Main extends Component {
   };
 
   deleteNote(key) {  
-    this.state.noteArray.splice(key,1);
-    this.setState({noteArray: this.noteArray})
+    delete this.state.noteArray[key]
+    const results = [];
+    this.state.noteArray.forEach(element => {
+      if (element !== undefined) {
+        results.push(element);
+      }
+    });
+    this.setState({noteArray: results})
 }
 
   render() {
     let notes = this.state.noteArray.map((val, id) => {
       return (
-        <Note key={id} val={val} deleteMethod={() => this.deleteNote(key)} />
+        <Note key={id} val={val} deleteMethod={() => this.deleteNote(id)} />
       );
     });
     if (this.state.fontsLoaded) {
@@ -84,10 +92,21 @@ export default class Main extends Component {
     );
     }
     else {
-      return null;
+      return (
+        <AnimatedSplash
+          translucent={true}
+          isLoaded={this.state.isLoaded}
+          logoImage={require("../assets/img/icon.png")}
+          backgroundColor={"#262626"}
+          logoHeight={150}
+          logoWidth={150}
+        >
+        </AnimatedSplash>
+      );
+    }
     }
   }
-}
+
 //Stylesheet
 const styles = StyleSheet.create({
   container: {
