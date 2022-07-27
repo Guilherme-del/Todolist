@@ -52,14 +52,20 @@ export default class Main extends Component {
   };
 
   deleteNote(key) {  
-    this.state.noteArray.splice(key,1);
-    this.setState({noteArray: this.noteArray})
+    delete this.state.noteArray[key]
+    const results = [];
+    this.state.noteArray.forEach(element => {
+      if (element !== undefined) {
+        results.push(element);
+      }
+    });
+    this.setState({noteArray: results})
 }
 
   render() {
     let notes = this.state.noteArray.map((val, id) => {
       return (
-        <Note key={id} val={val} deleteMethod={() => this.deleteNote(key)} />
+        <Note key={id} val={val} deleteMethod={() => this.deleteNote(id)} />
       );
     });
     if (this.state.fontsLoaded) {
